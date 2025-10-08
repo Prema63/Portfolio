@@ -21,6 +21,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState({});
 
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,6 +46,7 @@ const Portfolio = () => {
     return () => observer.disconnect();
   }, []);
 
+  
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
@@ -635,6 +637,7 @@ const Portfolio = () => {
           </p>
         </div>
       </footer>
+
     </div>
   );
 };
