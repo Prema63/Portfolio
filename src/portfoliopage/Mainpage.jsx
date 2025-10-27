@@ -45,7 +45,7 @@ const Portfolio = () => {
 
     return () => observer.disconnect();
   }, []);
-
+  
   
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
