@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Particles from "./Background";
 import {
   Menu,
   X,
@@ -20,7 +21,6 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState({});
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,8 +45,7 @@ const Portfolio = () => {
 
     return () => observer.disconnect();
   }, []);
-  
-  
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
@@ -170,9 +169,22 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white w-[100%] h-[600px] position-relative">
+      <div className="absolute inset-0 z-0">
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+      <nav className="fixed top-0 w-full bg-gray-900 backdrop-blur-sm z-50 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Desktop Navigation */}
@@ -227,7 +239,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16"
+        className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div
@@ -244,10 +256,15 @@ const Portfolio = () => {
                 MERN Stack Developer
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Building modern web applications with React, Node.js, MongoDB, and
-              Express. Passionate about creating seamless user experiences and
-              robust backend systems.
+            <p className="text-sm text-left pb-2 sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              MERN Stack Developer with 7 months of experience building
+              responsive, data-driven applications that combine elegant design
+              with powerful backend functionality.<br></br>
+
+              <span>
+                I’m continuously learning and refining my skills to build
+                scalable and impactful digital solutions.
+              </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -264,14 +281,20 @@ const Portfolio = () => {
               </button>
             </div>
           </div>
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown size={32} className="text-gray-400" />
-          </div>
+          </div> */}
         </div>
       </section>
 
+      {/* seprator */}
+      <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
+
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+      <section
+        id="about"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100 "
+      >
         <div className="max-w-7xl mx-auto">
           <div
             className={`transition-all duration-1000 ${
@@ -280,7 +303,7 @@ const Portfolio = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl text-gray-400 font-bold text-center mb-16">
               About <span className="text-blue-400">Me</span>
             </h2>
 
@@ -378,8 +401,14 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* seprator */}
+      <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
+
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section
+        id="experience"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100"
+      >
         <div className="max-w-7xl mx-auto">
           <div
             className={`transition-all duration-1000 ${
@@ -388,7 +417,7 @@ const Portfolio = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl text-gray-400 font-bold text-center mb-16">
               Work <span className="text-blue-400">Experience</span>
             </h2>
 
@@ -437,8 +466,14 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* seprator */}
+      <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
+
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+      <section
+        id="projects"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100"
+      >
         <div className="max-w-7xl mx-auto">
           <div
             className={`transition-all duration-1000 ${
@@ -447,7 +482,7 @@ const Portfolio = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-400 text-center mb-16">
               Featured <span className="text-blue-400">Projects</span>
             </h2>
 
@@ -527,8 +562,14 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* seprator */}
+      <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+
+      <section
+        id="contact"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100"
+      >
         <div className="max-w-7xl mx-auto">
           <div
             className={`transition-all duration-1000 ${
@@ -537,7 +578,7 @@ const Portfolio = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl text-gray-400 font-bold text-center mb-16">
               Get In <span className="text-blue-400">Touch</span>
             </h2>
 
@@ -557,15 +598,15 @@ const Portfolio = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <Mail className="text-blue-400" size={24} />
-                      <span>developer@email.com</span>
+                      <span>9263premasharma@gmail.com</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Phone className="text-blue-400" size={24} />
-                      <span>+1 (555) 123-4567</span>
+                      <span>+91 xxxxxxxx88</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <MapPin className="text-blue-400" size={24} />
-                      <span>New York, NY</span>
+                      <span>Noida, Uttar Pradesh</span>
                     </div>
                   </div>
 
@@ -637,7 +678,6 @@ const Portfolio = () => {
           </p>
         </div>
       </footer>
-
     </div>
   );
 };
