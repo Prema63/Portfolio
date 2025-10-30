@@ -249,7 +249,7 @@ const Portfolio = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="mb-8 ">Hii, I'm Prema Sharma</div>
+            <div className="mb-8 ">Hii, I'm Prema </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-3xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
