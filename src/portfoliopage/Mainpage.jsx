@@ -53,94 +53,86 @@ const Portfolio = () => {
 
   const skills = {
     frontend: [
-      { name: "React.js" },
+      { name: "HTML & CSS" },
       { name: "JavaScript " },
-      { name: "HTML5 & CSS3" },
-      { name: "Tailwind CSS" },
+      { name: "React.js" },
       { name: "Next.js" },
+      { name: "Tailwind CSS" },
     ],
     backend: [
       { name: "Node.js" },
       { name: "Express.js" },
       { name: "RESTful APIs" },
       { name: "JWT Authentication" },
-      { name: "Socket.io" },
     ],
     database: [
       { name: "MongoDB" },
-      { name: "Mongoose" },
       { name: "MySQL" },
-      { name: "Firebase" },
     ],
     tools: [
       { name: "Git & GitHub" },
       { name: "Postman" },
       { name: "VS Code" },
-      { name: "AWS Basics" },
-      { name: "Docker" },
     ],
   };
 
   const experiences = [
     {
-      company: "TechStart Solutions",
-      position: "Junior MERN Stack Developer",
-      duration: "Jan 2024 - Present",
-      description:
-        "Developed and maintained web applications using MERN stack. Collaborated with senior developers to implement new features and optimize existing code.",
+      company: "NK Tech",
+      position: "Web Developer(MERN Stack)",
+      duration: "Sep 2025 - Present",
       achievements: [
-        "Built 3 full-stack web applications serving 1000+ users",
-        "Reduced API response time by 30% through database optimization",
-        "Implemented responsive designs increasing mobile engagement by 25%",
+        "Creating responsive and interactive user interfaces with React.js and Next.js.",
+        "Supporting backend development with Node.js and Express.js.",
+        "Integrating frontend with backend APIs and while managing data in MongoDB.",
+        "Code optimization, debugging, and version control using Git"
       ],
     },
     {
-      company: "DigitalCraft Agency",
-      position: "Frontend Developer Intern",
-      duration: "Jun 2023 - Dec 2023",
-      description:
-        "Focused on creating responsive user interfaces using React.js and modern CSS frameworks. Worked closely with design team to implement pixel-perfect designs.",
+      company: "Encrobytes Technologies",
+      position: "MERN Stack Intern",
+      duration: "April 2025 - Aug 2025",
       achievements: [
-        "Converted 15+ Figma designs to responsive React components",
-        "Improved website performance by 40% through code optimization",
-        "Collaborated with 5-member development team on agile projects",
+        "Develop scalable and efficient web applications using MERN stack technologies.",
+        "Design and implement RESTful APIs using Node.js",
+        " Build responsive and interactive user interfaces using Next.js projects",
+        "Collaborate with team members to design and implement database schema using MongoDB.",
+        "Participate in code reviews, testing, and debugging."
       ],
     },
     {
-      company: "CodeLab Innovations",
-      position: "Web Development Trainee",
-      duration: "Mar 2023 - May 2023",
-      description:
-        "Intensive training program covering full-stack development fundamentals. Built several projects to demonstrate proficiency in MERN stack technologies.",
+      company: "Qspider Software Testing and Development Training Institue",
+      position: "Python FullStack Trainee",
+      duration: "April 2024 - March 2025",
       achievements: [
-        "Completed 8-week intensive bootcamp with 95% score",
-        "Developed 5 project applications showcasing different tech stacks",
-        "Mentored 3 junior trainees in JavaScript fundamentals",
+        "Intensive training program covering full-stack development fundamentals.",
+        " Built several projects to demonstrate proficiency in Web technologies.",
       ],
     },
   ];
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Job Portal",
       description:
-        "Full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.",
-      tech: ["React.js", "Node.js", "MongoDB", "Stripe API", "JWT"],
+        "Full-stack Job portal application with user authentication, Job management, shopping cart, and payment integration.",
+      tech: ["React.js", "Node.js", "MongoDB", "JWT"],
       features: [
         "User Authentication",
         "Payment Gateway",
         "Admin Dashboard",
         "Order Tracking",
       ],
-      github: "#",
+      github: "https://github.com/Prema63/JobportalFrontend",
       live: "#",
       image: "bg-gradient-to-br from-blue-400 to-purple-600",
     },
+
     {
-      title: "Social Media Dashboard",
+      title: "Hotel Management",
       description:
         "Real-time social media analytics dashboard with data visualization and user engagement metrics.",
-      tech: ["React.js", "Express.js", "MongoDB", "Socket.io", "Chart.js"],
+      tech: ["React.js", "Express.js", "MongoDB"],
       features: [
         "Real-time Updates",
         "Data Visualization",
@@ -151,11 +143,44 @@ const Portfolio = () => {
       live: "#",
       image: "bg-gradient-to-br from-green-400 to-blue-600",
     },
+
     {
-      title: "Task Management App",
+      title: "Youtube Clone",
       description:
         "Collaborative task management application with team features, deadlines, and progress tracking.",
-      tech: ["React.js", "Node.js", "MongoDB", "Redux", "JWT"],
+      tech: ["Express.js"],
+      features: [
+        "Team Collaboration",
+        "Deadline Tracking",
+        "Progress Reports",
+        "File Uploads",
+      ],
+      github: "https://github.com/Prema63/backend_project",
+      live: "#",
+      image: "bg-gradient-to-br from-purple-400 to-pink-600",
+    },
+
+    {
+      title: "E-commerce",
+      description:
+        "Collaborative task management application with team features, deadlines, and progress tracking.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      features: [
+        "Team Collaboration",
+        "Deadline Tracking",
+        "Progress Reports",
+        "File Uploads",
+      ],
+      github: "#",
+      live: "#",
+      image: "bg-gradient-to-br from-purple-400 to-pink-600",
+    }, 
+
+    {
+      title: "Bike Rental Management System",
+      description:
+        "Collaborative task management application with team features, deadlines, and progress tracking.",
+      tech: ["Python"],
       features: [
         "Team Collaboration",
         "Deadline Tracking",
@@ -166,6 +191,7 @@ const Portfolio = () => {
       live: "#",
       image: "bg-gradient-to-br from-purple-400 to-pink-600",
     },
+
   ];
 
   return (
@@ -249,18 +275,17 @@ const Portfolio = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="mb-8 ">Hii, I'm Prema </div>
+            <div className="mb-2 ">Hii, I'm Prema Sharma </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-3xl font-bold mb-6">
+            <h1 className="sm:text-5xl lg:text-3xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 MERN Stack Developer
               </span>
             </h1>
-            <p className="text-sm text-left pb-2 sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-left pb-5  text-gray-300 mb-8 max-w-2xl mx-auto">
               MERN Stack Developer with 7 months of experience building
               responsive, data-driven applications that combine elegant design
               with powerful backend functionality.<br></br>
-
               <span>
                 I’m continuously learning and refining my skills to build
                 scalable and impactful digital solutions.
@@ -273,6 +298,7 @@ const Portfolio = () => {
               >
                 View My Work
               </button>
+
               <button
                 onClick={() => scrollToSection("contact")}
                 className="px-8 py-3 border border-gray-600 rounded-lg hover:border-blue-400 hover:text-blue-400 transition-all"
@@ -313,27 +339,40 @@ const Portfolio = () => {
                   Hi, I'm a passionate MERN Stack Developer
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  With 1 year of hands-on experience in full-stack development,
-                  I specialize in building scalable web applications using
-                  MongoDB, Express.js, React.js, and Node.js. I'm passionate
-                  about creating efficient, user-friendly solutions that solve
-                  real-world problems.
+                  {/* In the past 7 months, I’ve been immersed in full-stack web
+                  development, building projects with MongoDB, Express.js,
+                  React.js, and Node.js. I love turning ideas into real,
+                  functional applications that are fast, intuitive, and
+                  enjoyable to use.  */}
+                  With 7 months of hands-on experience in full-stack web
+                  development, I’ve been actively building and refining web
+                  applications using the MERN stack—MongoDB, Express.js,
+                  React.js, and Node.js. I focus on writing clean, efficient
+                  code and delivering responsive, user-centered solutions.
                 </p>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  My journey started with a curiosity about how web applications
-                  work, and it has evolved into a career where I get to build
-                  amazing digital experiences every day. I love learning new
-                  technologies and staying up-to-date with the latest trends in
-                  web development.
+                  During this time, I’ve collaborated on real-world projects
+                  that strengthened my understanding of both front-end and
+                  back-end workflows. I’m dedicated to continuous learning,
+                  staying updated with modern development trends, and applying
+                  best practices to deliver high-quality digital solutions.
+
+                  {/* My development journey began with a passion for understanding
+                  how modern web applications come to life. Over the past
+                  months, I’ve transformed that curiosity into practical
+                  experience—designing, coding, and deploying projects that
+                  bring real ideas into the digital world. I’m always eager to
+                  learn new technologies and keep improving my skills to build
+                  even better web experiences. */}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-2">
                     <MapPin size={20} className="text-blue-400" />
-                    <span>New York, NY</span>
+                    <span>Noida</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail size={20} className="text-blue-400" />
-                    <span>developer@email.com</span>
+                    <span>portfolio123@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -356,7 +395,7 @@ const Portfolio = () => {
                 <div className="bg-gray-900 p-6 rounded-lg">
                   <Server className="text-purple-400 mb-4" size={32} />
                   <h4 className="font-semibold mb-2">Deployment</h4>
-                  <p className="text-sm text-gray-400">AWS, Heroku, Netlify</p>
+                  <p className="text-sm text-gray-400">Vercel, Netlify, GoDaddy, Hostinger</p>
                 </div>
                 <div className="bg-gray-900 p-6 rounded-lg">
                   <Smartphone className="text-orange-400 mb-4" size={32} />
@@ -372,24 +411,18 @@ const Portfolio = () => {
                 Technical Skills
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {Object.entries(skills).map(([category, skillList]) => (
+                {Object?.entries(skills)?.map(([category, skillList]) => (
                   <div key={category} className="bg-gray-900 p-6 rounded-lg">
                     <h4 className="font-semibold mb-4 capitalize text-blue-400">
                       {category}
                     </h4>
                     <div className="space-y-3">
-                      {skillList.map((skill, index) => (
+                      {skillList?.map((skill, index) => (
                         <div key={index}>
                           <div className="flex justify-between mb-1">
                             <span className="text-sm">{skill.name}</span>
-                            {/* <span className="text-sm text-gray-400">{skill.level}%</span> */}
                           </div>
-                          {/* <div className="w-full bg-gray-700 rounded-full h-2">
-                            <div 
-                              className="bg-gradient-to-r from-blue-400 to-purple-600 h-2 rounded-full transition-all duration-1000"
-                              style={{ width: isVisible.about ? `${skill.level}%` : '0%' }}
-                            ></div>
-                          </div> */}
+                         
                         </div>
                       ))}
                     </div>
@@ -422,7 +455,7 @@ const Portfolio = () => {
             </h2>
 
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
+              {experiences?.map((exp, index) => (
                 <div
                   key={index}
                   className="bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition-colors"
@@ -440,13 +473,12 @@ const Portfolio = () => {
                       {exp.duration}
                     </span>
                   </div>
-                  <p className="text-gray-300 mb-4">{exp.description}</p>
                   <div>
                     <h5 className="font-medium mb-2 text-purple-400">
-                      Key Achievements:
+                      Key Responsbility:
                     </h5>
                     <ul className="space-y-1">
-                      {exp.achievements.map((achievement, achIndex) => (
+                      {exp?.achievements?.map((achievement, achIndex) => (
                         <li key={achIndex} className="flex items-start gap-2">
                           <Star
                             size={16}
@@ -564,8 +596,9 @@ const Portfolio = () => {
 
       {/* seprator */}
       <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
-      {/* Contact Section */}
 
+      
+      {/* Contact Section */}
       <section
         id="contact"
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100"
@@ -598,7 +631,7 @@ const Portfolio = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <Mail className="text-blue-400" size={24} />
-                      <span>9263premasharma@gmail.com</span>
+                      <span>portfolio123@gmail.com</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Phone className="text-blue-400" size={24} />
@@ -612,19 +645,19 @@ const Portfolio = () => {
 
                   <div className="flex gap-4 mt-8">
                     <a
-                      href="#"
+                      href="https://github.com/Prema63"
                       className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                     >
                       <Github size={24} />
                     </a>
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/in/prema-sharma-16a0a1296/"
                       className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                     >
                       <Linkedin size={24} />
                     </a>
                     <a
-                      href="#"
+                      href=""
                       className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                     >
                       <Mail size={24} />
