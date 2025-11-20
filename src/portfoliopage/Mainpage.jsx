@@ -189,7 +189,7 @@ const Portfolio = () => {
       ],
       github: "#",
       live: "#",
-      image: "bg-gradient-to-br from-purple-400 to-pink-600",
+      img: "https://thumbs.dreamstime.com/b/bike-rental-bicycle-sign-web-print-cartoon-vector-illustration-geolocation-rent-pin-destination-poster-banner-template-117288417.jpg"
     },
 
   ];
@@ -283,7 +283,7 @@ const Portfolio = () => {
               </span>
             </h1>
             <p className="text-lg text-left pb-5  text-gray-300 mb-8 max-w-2xl mx-auto">
-              MERN Stack Developer with 7 months of experience building
+              MERN Stack Developer with 8 months of experience building
               responsive, data-driven applications that combine elegant design
               with powerful backend functionality.<br></br>
               <span>
@@ -519,13 +519,13 @@ const Portfolio = () => {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
+              {projects?.map((project, index) => (
                 <div
                   key={index}
                   className="bg-gray-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
                 >
                   <div
-                    className={`h-48 ${project.image} flex items-center justify-center`}
+                    className={`h-48 ${projects.img} flex items-center justify-center`}
                   >
                     <Code2 size={48} className="text-white opacity-80" />
                   </div>
