@@ -22,6 +22,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState({});
 
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,7 +37,10 @@ const Portfolio = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px",
+      }
     );
 
     document.querySelectorAll("section[id]").forEach((section) => {
@@ -108,13 +112,13 @@ const Portfolio = () => {
     {
       title: "Job Portal",
       description:
-        "Full-stack Job portal application with user authentication, Job management, shopping cart, and payment integration.",
+        "A full-stack job portal with authentication, admin controls, and profile management for jobseekers and recruiters.",
       tech: ["React.js", "Node.js", "MongoDB", "JWT"],
       features: [
         "User Authentication",
-        "Payment Gateway",
         "Admin Dashboard",
-        "Order Tracking",
+        "Jobseeker and Recruiter profile",
+        "Profile Management",
       ],
       github: "https://github.com/Prema63/JobportalFrontend",
       live: "#",
@@ -124,12 +128,13 @@ const Portfolio = () => {
     {
       title: "Hotel Management",
       description:
-        "Real-time social media analytics dashboard with data visualization and user engagement metrics.",
+        "A MERN platform with authentication, admin controls, dynamic property management, and a fully responsive design.",
       tech: ["React.js", "Express.js", "MongoDB"],
       features: [
-        "Real-time Updates",
-        "Data Visualization",
-        "User Analytics",
+        "Authenticationa and Acess control",
+        "Admin Panel",
+        "Dynamic Properties",
+        "Inventory and Amenities Management",
         "Responsive Design",
       ],
       github: "https://github.com/Prema63/HMProject",
@@ -140,13 +145,15 @@ const Portfolio = () => {
     {
       title: "Youtube Clone",
       description:
-        "Collaborative task management application with team features, deadlines, and progress tracking.",
+        "An Express.js backend supporting user auth, channel management, likes, subscriptions, watch history, and profile updates, video interactions like likes and subscriptions, watch history tracking, and profile updates including images.",
       tech: ["Express.js"],
       features: [
-        "Team Collaboration",
-        "Deadline Tracking",
-        "Progress Reports",
-        "File Uploads",
+        "User Authentication",
+        "Register and Login User",
+        "Channel Management",
+        "Like and Subscribe System ",
+        "Watch History",
+        "Update Profile and Cover Images,"
       ],
       github: "https://github.com/Prema63/backend_project",
       live: "#",
@@ -156,13 +163,13 @@ const Portfolio = () => {
     {
       title: "E-commerce",
       description:
-        "Collaborative task management application with team features, deadlines, and progress tracking.",
+        "A simple multi-page clothing shopping website featuring static product images, banner thumbnails, and a fully responsive layout for a smooth browsing experience.",
       tech: ["HTML", "CSS", "JavaScript"],
       features: [
-        "Team Collaboration",
-        "Deadline Tracking",
-        "Progress Reports",
-        "File Uploads",
+        "Shopping cloths",
+        "Static Images",
+        "Mutliple pages and thumbnail baners",
+        "Responsive Design",
       ],
       github: "https://github.com/Prema63/Cara",
       live: "#",
@@ -172,13 +179,12 @@ const Portfolio = () => {
     {
       title: "Bike Rental Management System",
       description:
-        "Collaborative task management application with team features, deadlines, and progress tracking.",
+        "A streamlined system for browsing available bikes, checking prices, making rental bookings, and managing bike inventory efficiently.",
       tech: ["Python"],
       features: [
-        "Team Collaboration",
-        "Deadline Tracking",
-        "Progress Reports",
-        "File Uploads",
+        "Authentication",
+        "Calculate cost for vending a bike. ",
+        "Stock count",
       ],
       github: "#",
       live: "#",
@@ -363,7 +369,7 @@ const Portfolio = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail size={20} className="text-blue-400" />
-                    <span>portfolio123@gmail.com</span>
+                    <span>9263premasharma@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -494,7 +500,7 @@ const Portfolio = () => {
       <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
 
       {/* Projects Section */}
-      <section
+      {/* <section
         id="projects"
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100"
       >
@@ -594,6 +600,108 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section
+        id="projects"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-gray-100"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div
+            className={`transition-all duration-1000 ${
+              isVisible.projects
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-400 text-center mb-16">
+              Featured <span className="text-blue-400">Projects</span>
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects?.map((project, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 min-h-fit"
+                >
+                  <div className="h-48 sm:h-56 md:h-48 w-full overflow-hidden">
+                    {project.img ? (
+                      <img
+                        src={project.img}
+                        alt={project.title}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    ) : (
+                      <div
+                        className={`h-full ${project.img} flex items-center justify-center`}
+                      ></div>
+                    )}
+                  </div>
+
+                  <div className="p-4 sm:p-5 md:p-6">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-gray-300 text-sm mb-4">
+                      {project.description}
+                    </p>
+
+                    <div className="mb-4">
+                      <h4 className="font-medium mb-2 text-purple-400">
+                        Technologies:
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-2 py-1 bg-gray-700 text-xs rounded-md"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="font-medium mb-2 text-green-400">
+                        Features:
+                      </h4>
+                      <ul className="text-sm space-y-1">
+                        {project.features.map((feature, featIndex) => (
+                          <li
+                            key={featIndex}
+                            className="flex items-center gap-2"
+                          >
+                            <div className="w-1 h-1 bg-green-400 rounded-full"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <a
+                        href={project.github}
+                        className="flex items-center gap-2 text-xs sm:text-sm bg-gray-700 px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                      >
+                        <Github size={16} />
+                        Code
+                      </a>
+                      <a
+                        href={project.live}
+                        className="flex items-center gap-2 text-xs sm:text-sm bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* seprator */}
@@ -632,11 +740,11 @@ const Portfolio = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <Mail className="text-blue-400" size={24} />
-                      <span>portfolio123@gmail.com</span>
+                      <span>9263premasharma@gmail.com</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Phone className="text-blue-400" size={24} />
-                      <span>+91 xxxxxxxx88</span>
+                      <span>+91 6392407188</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <MapPin className="text-blue-400" size={24} />
@@ -708,11 +816,9 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Portfolio.
-            
           </p>
         </div>
       </footer>
-
     </div>
   );
 };
