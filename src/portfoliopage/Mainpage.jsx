@@ -65,15 +65,8 @@ const Portfolio = () => {
       { name: "RESTful APIs" },
       { name: "JWT Authentication" },
     ],
-    database: [
-      { name: "MongoDB" },
-      { name: "MySQL" },
-    ],
-    tools: [
-      { name: "Git & GitHub" },
-      { name: "Postman" },
-      { name: "VS Code" },
-    ],
+    database: [{ name: "MongoDB" }, { name: "MySQL" }],
+    tools: [{ name: "Git & GitHub" }, { name: "Postman" }, { name: "VS Code" }],
   };
 
   const experiences = [
@@ -85,7 +78,7 @@ const Portfolio = () => {
         "Creating responsive and interactive user interfaces with React.js and Next.js.",
         "Supporting backend development with Node.js and Express.js.",
         "Integrating frontend with backend APIs and while managing data in MongoDB.",
-        "Code optimization, debugging, and version control using Git"
+        "Code optimization, debugging, and version control using Git",
       ],
     },
     {
@@ -97,7 +90,7 @@ const Portfolio = () => {
         "Design and implement RESTful APIs using Node.js",
         " Build responsive and interactive user interfaces using Next.js projects",
         "Collaborate with team members to design and implement database schema using MongoDB.",
-        "Participate in code reviews, testing, and debugging."
+        "Participate in code reviews, testing, and debugging.",
       ],
     },
     {
@@ -125,7 +118,7 @@ const Portfolio = () => {
       ],
       github: "https://github.com/Prema63/JobportalFrontend",
       live: "#",
-      image: "bg-gradient-to-br from-blue-400 to-purple-600",
+      img: "https://data.infyways.com/wp-content/uploads/2023/10/WordPress-Job-Board-Themes-5-1024x459.png",
     },
 
     {
@@ -139,9 +132,9 @@ const Portfolio = () => {
         "User Analytics",
         "Responsive Design",
       ],
-      github: "#",
+      github: "https://github.com/Prema63/HMProject",
       live: "#",
-      image: "bg-gradient-to-br from-green-400 to-blue-600",
+      img: "/assets/hotel.webp",
     },
 
     {
@@ -157,7 +150,7 @@ const Portfolio = () => {
       ],
       github: "https://github.com/Prema63/backend_project",
       live: "#",
-      image: "bg-gradient-to-br from-purple-400 to-pink-600",
+      img: "/assets/youtube.jpg",
     },
 
     {
@@ -171,10 +164,10 @@ const Portfolio = () => {
         "Progress Reports",
         "File Uploads",
       ],
-      github: "#",
+      github: "https://github.com/Prema63/Cara",
       live: "#",
-      image: "bg-gradient-to-br from-purple-400 to-pink-600",
-    }, 
+      img: "/assets/Ecommerce.jpg",
+    },
 
     {
       title: "Bike Rental Management System",
@@ -189,9 +182,8 @@ const Portfolio = () => {
       ],
       github: "#",
       live: "#",
-      img: "https://thumbs.dreamstime.com/b/bike-rental-bicycle-sign-web-print-cartoon-vector-illustration-geolocation-rent-pin-destination-poster-banner-template-117288417.jpg"
+      img: "/assets/Bike rental.png",
     },
-
   ];
 
   return (
@@ -356,7 +348,6 @@ const Portfolio = () => {
                   back-end workflows. I’m dedicated to continuous learning,
                   staying updated with modern development trends, and applying
                   best practices to deliver high-quality digital solutions.
-
                   {/* My development journey began with a passion for understanding
                   how modern web applications come to life. Over the past
                   months, I’ve transformed that curiosity into practical
@@ -395,7 +386,9 @@ const Portfolio = () => {
                 <div className="bg-gray-900 p-6 rounded-lg">
                   <Server className="text-purple-400 mb-4" size={32} />
                   <h4 className="font-semibold mb-2">Deployment</h4>
-                  <p className="text-sm text-gray-400">Vercel, Netlify, GoDaddy, Hostinger</p>
+                  <p className="text-sm text-gray-400">
+                    Vercel, Netlify, Hostinger, Cpanel
+                  </p>
                 </div>
                 <div className="bg-gray-900 p-6 rounded-lg">
                   <Smartphone className="text-orange-400 mb-4" size={32} />
@@ -422,7 +415,6 @@ const Portfolio = () => {
                           <div className="flex justify-between mb-1">
                             <span className="text-sm">{skill.name}</span>
                           </div>
-                         
                         </div>
                       ))}
                     </div>
@@ -524,11 +516,21 @@ const Portfolio = () => {
                   key={index}
                   className="bg-gray-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
                 >
-                  <div
-                    className={`h-48 ${projects.img} flex items-center justify-center`}
-                  >
-                    <Code2 size={48} className="text-white opacity-80" />
+                  <div className="h-48 w-full overflow-hidden">
+                    {project.img ? (
+                      <img
+                        src={project.img}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div
+                        className={`h-full ${project.img} flex items-center justify-center`}
+                      >
+                      </div>
+                    )}
                   </div>
+
                   <div className="p-6">
                     <h3 className="text-xl font-semibold mb-3">
                       {project.title}
@@ -597,7 +599,6 @@ const Portfolio = () => {
       {/* seprator */}
       <div className="h-1 bg-gradient-to-b from-blue-800 via-purple-800 to-transparent"></div>
 
-      
       {/* Contact Section */}
       <section
         id="contact"
@@ -706,11 +707,12 @@ const Portfolio = () => {
       <footer className="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} MERN Stack Developer Portfolio. Built
-            with React & Tailwind CSS.
+            © {new Date().getFullYear()} Portfolio.
+            
           </p>
         </div>
       </footer>
+
     </div>
   );
 };
