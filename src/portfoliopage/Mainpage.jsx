@@ -76,8 +76,8 @@ const Portfolio = () => {
   const experiences = [
     {
       company: "NK Tech",
-      position: "Web Developer(MERN Stack) Intern",
-      duration: "September 2025 - December 2025",
+      position: "Web Developer(MERN Stack)",
+      duration: "October 2025 - December 2025",
       achievements: [
         "Creating responsive and interactive user interfaces with React.js and Next.js.",
         "Supporting backend development with Node.js and Express.js.",
@@ -342,7 +342,7 @@ const Portfolio = () => {
                   React.js, and Node.js. I love turning ideas into real,
                   functional applications that are fast, intuitive, and
                   enjoyable to use.  */}
-                  With 7 months of hands-on experience in full-stack web
+                  With 8 months of hands-on experience in full-stack web
                   development, I’ve been actively building and refining web
                   applications using the MERN stack—MongoDB, Express.js,
                   React.js, and Node.js. I focus on writing clean, efficient
